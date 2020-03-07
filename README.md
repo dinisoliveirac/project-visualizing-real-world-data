@@ -1,52 +1,78 @@
-![IronHack Logo](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_d5c5793015fec3be28a63c4fa3dd4d55.png)
+#   Project: Visualizing Real World Data
 
-# Project: Visualizing Real World Data
+Dinis Oliveira Costa
+Data Part-time Dic 2019
 
-## Overview
 
-The goal of this project is to practice creating and interpreting different types of visualizations using real world data.
+## Content
+- [Project Description](#project)
+- [Data](#data)
+- [Workflow](#workflow)
+- [Results](#results)
 
-**You will be working individually for this project**, but we'll be guiding you along the process and helping you as you go. 
 
----
+## Project Description
 
-## Technical Requirements
+- The goal of this project was to practice interpreting different types of visualizations by collecting relevant information about players from different teams and nationalities that were playing during the year of 2019 in order to compare their attributes and analyse the differences between the leagues where each of them plays.
 
-The technical requirements for this project are as follows:
 
- - Select a dataset from a public source.
- - Create a Jupyter noteboosk to analyze the data
- - Using your data, create a minimum of one scatter plot, one histogram, one box plot and one bar graph (you can add more than one visualization of each type of you choose). Graphs should contain the proper labeling of the x and y axis when appropriate as well as a title for the graph.
- - Explain what insight or information is inferred from these visualizations. The explanation should be in the notebook in markdown cells.
+- The commands assume a basic understanding of the Pandas, Matplotlib and Seaborn libraries.
 
-## Necessary Deliverables
+## Data
 
-The following deliverables should be pushed to your Github repo for this chapter.
+The data used in this project was collected from:
 
-- **A Jupyter notebook** containing your analysis and the code you used to obtain this analysis.
-- **A data folder** containing your data set.
+- `FIFA 19 complete player dataset` - a free dataset from Kaggle containing 18k+ FIFA 19 players and ~90 attribute points extracted from the latest FIFA database
 
-## Suggested Ways to Get Started
+The attributes' list includes: 
 
-* **Find a data set to process** - a great place to start looking would be [Awesome Public Data Sets](https://github.com/awesomedata/awesome-public-datasets), [Kaggle Data Sets](https://www.kaggle.com/datasets), or the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php). A great new source is the [Google dataset search](https://toolbox.google.com/datasetsearch).
-* **Perform Preliminary Analysis** - use functions like `describe` to help guide you to the correct insight and data visualization. 
-* **Use the tools in your tool kit** - your knowledge of the different types of visualizations and when to use them should come in handy with this assignment.
-* **Consult documentation and resources provided** to better understand the tools you are using and how to accomplish what you want.
+- Age, Nationality, Overall, Potential, Club, Value, Wage, Preferred Foot, International Reputation, Weak Foot, Skill Moves, Work Rate, Position, Jersey Number, Joined, Loaned From, Contract Valid Until, Height, Weight, LS, ST, RS, LW, LF, CF, RF, RW, LAM, CAM, RAM, LM, LCM, CM, RCM, RM, LWB, LDM, CDM, RDM, RWB, LB, LCB, CB, RCB, RB, Crossing, Finishing, Heading, Accuracy, ShortPassing, Volleys, Dribbling, Curve, FKAccuracy, LongPassing, BallControl, Acceleration, SprintSpeed, Agility, Reactions, Balance, ShotPower, Jumping, Stamina, Strength, LongShots, Aggression, Interceptions, Positioning, Vision, Penalties, Composure, Marking, StandingTackle, SlidingTackle, GKDiving, GKHandling, GKKicking, GKPositioning, GKReflexes, and Release Clause.
 
-## Project Feedback + Evaluation
 
-* __Technical Requirements__: Did you deliver a project that met all the technical requirements? Given what the class has covered so far, did you build something that was reasonably complex?
+## Workflow
 
-* __Creativity__: Did you add a personal spin or creative element into your project submission? Did you incorporate domain knowledge or unique perspective into your analysis.
+The project follows three essential steps: 
+- **1) Data Cleaning**, 
+- **2) Data Manipulation** and 
+- **3) Data Visualization** - in order to make it easy to keep track of changes and better structure the clean data set.
 
-* __Code Quality__: Did you follow code style guidance and best practices covered in class?
 
-* __Total__: Your instructors will give you a total score on your project between:
+### Step 1 - ` Data Cleaning`
 
-    **Score**|**Expectations**
-    -----|-----
-    0|Does not meet expectations
-    1|Meets expectations, good job!
-    2|Exceeds expectations, you wonderful creature, you!
+- using the given dataset, it is possible to get a clear idea of how each row is characterised given the original column names; 
 
-This will be useful as an overall gauge of whether you met the project goals, but __the more important scores are described in the specs above__, which can help you identify where to focus your efforts for the next project!
+- since the objective is to interpretate a few attritubes from the list, we will begin by cleaning those which do not support our analysis.
+
+1.1 - Dataset exploration
+1.2 - Data columns cleaning
+1.3 - Data Cleaning
+
+### Step 2: `Data Manipulation`:
+
+- resorting to each player's attributes, it is possible to draw conclusions by comparing their average team numbers and countries of origin; 
+
+- using a list of all the major european leagues, we will be able to compare differences between the average player attribute's that plays on each of them;
+
+2.1 - Defining the attributes to compare
+2.2 - Divide and group the players by team and league where they play at
+2.3 - Divide and group the players by country of origin
+2.4 -Creating new DataFrames with the data collected
+
+
+### Data Visualization:
+
+3.1 - Data Cleaning of the final DataFrame
+3.2 - Analysis of the results
+
+
+
+## Results
+
+- Clean data set containing all the attributes from each of the players from the teams that we analysed;
+- Set of figures that help visualize the results and draw conclusions about the dataset
+
+
+## Deliverables
+- `data.csv` - with all the data collected from Kaggle
+- `Fifa.ipynb` - containing all the code that built the project
+- `figures` - containing the product of all the visualization that supported the project
